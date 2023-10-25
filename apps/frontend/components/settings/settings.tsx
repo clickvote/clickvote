@@ -60,7 +60,7 @@ export const Settings: FC<{ settings: SettingsInterface }> = (props) => {
           <Input
             label="Organization Name"
             name="orgName"
-            labelClassName="mt-7"
+            labelclassname="mt-7"
           />
           <Button type="submit" className="mb-10">
             Update
@@ -83,7 +83,7 @@ export const Settings: FC<{ settings: SettingsInterface }> = (props) => {
                 value={settings.publicKey}
                 readOnly={true}
                 className="cursor-pointer"
-                labelClassName="mt-7"
+                labelclassname="mt-7"
               />
             </div>
             <div className="flex items-end ml-2 hover:opacity-70">
