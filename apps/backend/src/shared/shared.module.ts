@@ -4,7 +4,7 @@ import { UsersModule } from '@clickvote/backend/src/packages/users/users.module'
 import { RegistrationLoginService } from '@clickvote/backend/src/shared/auth/registration.login.service';
 import { OrgModule } from '@clickvote/backend/src/packages/org/org.module';
 import { EnvironmentModule } from '@clickvote/backend/src/packages/environment/environment.module';
-import { MongooseModule, RedisService } from '@clickvote/nest-libraries';
+import { MongooseModule, RedisService, PosthogService } from '@clickvote/nest-libraries';
 import { MailService } from '@clickvote/backend/src/shared/mail/mail.service';
 import { MailModule } from '@clickvote/backend/src/shared/mail/mail.module';
 
@@ -18,7 +18,7 @@ import { MailModule } from '@clickvote/backend/src/shared/mail/mail.module';
     MailModule,
   ],
   controllers: [],
-  providers: [AuthService, RedisService, RegistrationLoginService, MailService],
+  providers: [AuthService, RedisService, RegistrationLoginService, MailService, PosthogService],
   get exports() {
     return this.providers;
   },
