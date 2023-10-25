@@ -42,12 +42,19 @@ export const Select: FC<
   };
   return (
     <>
-      {!!label && <div className="mb-2">{label}</div>}
+      {!!label && (
+        <label htmlFor={label.toLowerCase()} className="mb-2">
+          {label}
+        </label>
+      )}
       <select
         {...allOther}
         {...all}
         onChange={onChangeFunc}
-        className={clsx(`p-2 w-full bg-[#fff0fd]/10 border border-[#EBECED]/20 rounded-md`, className)}
+        className={clsx(
+          `p-2 w-full bg-[#fff0fd]/10 border border-[#EBECED]/20 rounded-md`,
+          className
+        )}
       >
         {children}
       </select>
